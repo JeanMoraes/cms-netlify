@@ -1,5 +1,16 @@
 <template>
   <div class="container">
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', (user) => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/'
+            })
+          }
+        })
+      }
+    </script>
     <div>
       <Logo />
       <h1 class="title">cms-netlify</h1>
