@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on('init', (user) => {
